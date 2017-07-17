@@ -6,6 +6,9 @@
     <!--- Google Fonts--->
     <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,700|Heebo:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--- Fav Icon --->
+    <link rel="SHORTCUT ICON" href="images/footerlogo.png" />
+    <link rel="icon" href="images/footerlogo.png" type="image/ico" />
   </head>
   <body>
 
@@ -18,14 +21,14 @@
     </div>
     <div class="mainNav">
       <div class="collection">
-        <li><a href="#landing">about</a><li>
+        <a href="#landing">about</a>
       </div>
       <div class="collection">
-        <li><a href="#portfolio">work</a><li>
+        <a href="#portfolio">work</a>
       </div>
       <div class="collection">
         <div class="hirebutton">
-        <li><a href="#contact">hire me</a><li>
+        <a href="#contact" class="hire-button">hire me</a>
         </div>
       </div>
     </div>
@@ -40,11 +43,11 @@
     </div>
   <div class="purplebox">
     <div class="landingtitle">
-      <h1 class="landingheading">Ishar Keshu</h1>
-      <h1 style="font-weight:300" class="landingheading">UX/UI designer</h1>
+      <h1 class="landingheading1">Ishar Keshu</h1>
+      <h1 style="font-weight:300" class="landingheading2">UX/UI designer</h1>
     </div>
     <div class="landingtext">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac mi id magna condimentum luctus non nec arcu. Aliquam facilisis est sit amet bibendum consequat. Nunc feugiat justo fermentum, fringilla ante consectetur, congue magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla felis. Aenean sed facilisis metus, id commodo enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst.</p>
+      <p> Hello, I'm Ishar and I'm a UX/UI Designer based out of Princeton, NJ. As a recent graduate at Bloc, a coding intensive bootcamp, I am excited to share my skills and passion for design. I specialize in creating beautiful responsive websites as well as phone apps using industry standard skills such as HTML/CSS, jQuery, Sketch and Adobe Creative Suite. When I'm not coding you can find me at a local yoga studio either teaching or practicing. I'm also a huge tea fan!   </p>
     </div>
   </div>
   </div>
@@ -56,94 +59,85 @@
     <h1 class="title">Portfolio</h1>
   <div class="portfoliocontainer">
     <div class= "portimage">
-      <img src="images/youcreate.png" alt="You Create" class="youcreate" />
+      <a href ="casestudies.html#youcreate"><img src="images/youcreate.png" alt="You Create" class="image" /></a>
     </div>
     <div class="portinfo">
       <h1 class="porttitle">YouCreate</h1>
       <p class="porttext">
         YouCreate is a file-sharing app similar to Dropbox and Google Drive. It’s aimed to help users save, share and collaborate.
       </p>
-      <div class="button">
-        <p class="casestudy"> view case study</p>
-      </div>
+        <a href ="casestudies.html#youcreate" class="casestudy"> view case study</a>
     </div>
   </div>
   <div class="portfoliocontainer">
     <div class= "portimage">
-      <img src="images/lotusteas.png" alt="Lotus Teas" class="lotusteas" />
+      <a href ="casestudies.html#lotusteas"><img src="images/lotusteas.png" alt="Lotus Teas" class="image" /></a>
     </div>
     <div class="portinfo">
       <h1 class="porttitle">Lotus Teas</h1>
       <p class="porttext">
         Lotus Teas is a website I created aimed to sell authentic Chinese loose-leaf teas. The site is fully-responsive as well.
       </p>
-      <div class="button">
-        <p class="casestudy"> view case study</p>
-      </div>
+        <a href ="casestudies.html#lotusteas" class="casestudy"> view case study</a>
       </div>
     </div>
   </div>
   <div class="portfoliocontainer">
     <div class= "portimage">
-      <img src="images/tastepad.png" alt="Taste Pad" class="tastepad" />
+      <a href ="casestudies.html#tastepad"><img src="images/tastepad.png" alt="Taste Pad" class="image"  /></a>
     </div>
     <div class="portinfo">
       <h1 class="porttitle">Taste Pad</h1>
       <p class="porttext">
         TastePad is a mobile app which helps users find food trucks in their area. In addition, they can place an order for pick-up.
       </p>
-      <div class="button">
-        <p class="casestudy"> view case study</p>
-      </div>
+        <a href ="casestudies.html#tastepad" class="casestudy"> view case study</a>
     </div>
   </div>
 </div>
 
-                          <!--Contact -->
-<div id="contact">
-  <section class="contact-section">
-          <h1 class="title" style="color:white">Let's stay in touch ...</h1>
-          <form class="form">
-              <div class="id">
-                  <div class="name">
-                      <label for="name">First Name</label>
-                      <input id="firstname" type="text" name="firstname">
-                  </div>
-                  <div class="name">
-                      <label for="name">Last Name</label>
-                      <input id="lastname" type="text" name="lastname">
-                  </div>
-                  <div class="email">
-                      <label for="email">Email</label>
-                      <input id="email" type="text" name="email">
-                  </div>
-              </div>
-              <div class="subject">
-                  <label for="subject">Subject</label>
 
-                  <input id="subject" type="text" name="subject">
-              </div>
-              <div class="content">
-                  <label id="contect" for="content">Content</label>
+<div id=contact>
+<h1 class="title" style="color: white"> Let's stay in touch ...</h1>                          <!--Contact -->
+<div class="formdiv">
+  <form action="mailto:ishkeshu@gmail.com" method="post" enctype="text/plain">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name">
 
-                  <textarea name="content" id="" cols="30" rows="10"></textarea>
-                  <button type="submit">SUBMIT</button>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name">
 
-              </div>
-          </form>
-      </section>
+    <label for="email">Email Address</label>
+    <input type ="text" id="email" name="email" placeholder="Your email address">
+
+    <label for="subject">Subject</label>
+    <input type ="text" id="subject" name="subject" placeholder="Subject of this message">
+
+    <label for="message">Message</label>
+    <textarea type ="text" id="message" name="message" placeholder="Please enter your message here ..."></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
 </div>
-
+</div>
                           <!-- Footer -->
 <footer id="footer">
   <div class ="footerbar">
     <div class="innerfooter">
       <p class="footertitle"> Ishar Keshu</p>
-      <img src="" alt="Logo" class="footerimg" />
+      <img src="images/footerlogo.png" alt="Logo" class="footerimg" />
       <p class="footerrights">© 2017 All Rights Reserved</p>
     </div>
   </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.landingheading1').fadeIn(1500);
+    $('.landingheading2').fadeIn(2000);
+    $('.landingtext').fadeIn(5000);
+});
+</script>
   </body>
 </html>

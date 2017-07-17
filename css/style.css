@@ -10,6 +10,9 @@ p {
   font-family: 'Catamaran', sans-serif;
 }
 
+body {
+  margin: 0;
+}
       /* NAV BAR */
 
 #navbar {
@@ -55,45 +58,35 @@ p {
   justify-content: space-between;
 }
 
-.collection:nth-child(3) {
-  border: 1px solid #5B5EA6;
-  border-radius: 8px;
-  padding: 5px;
-}
 
 .collection a:hover {
   color: #A67F5B;
 }
 
-.collection:nth-child(3) a:hover {
-  color: #fff;
-}
-
-.collection:nth-child(3):hover {
-  background-color: #A67F5B;
-  border: 1px solid #fff;
+.hire-button {
+  text-decoration: none;
+  color: #5c5ca6;
+  border: 1px solid #5c5ca6;
+  padding: 2px 4px;
   border-radius: 8px;
+  text-transform: lowercase;
+  transition: background-color 300ms ease-in, color 300ms ease-in;
 }
 
-.hirebutton {
-  display: inline-block;
-  color: white;
-}
-.hirebutton:hover {
-  color: #ffffff;
+.hire-button:hover,
+.hire-button:focus {
+  background-color: #A67F5B;
+  color: white !important;
 }
 
-li {
-  display: inline;
+.hire-button:focus {
+  outline: 0;
 }
 
 a:hover {
   cursor: pointer;
 }
 
-.li:nth-child(3):hover {
-  color: #fff;
-}
 
 a {
   text-decoration: none;
@@ -167,12 +160,21 @@ a {
   padding-left: 10%;
   padding-right: 10%;
   text-align: left;
+  display: none;
 }
 
-.landingheading {
+.landingheading1 {
   text-align: center;
   margin: auto 0;
+  display: none;
 }
+
+.landingheading2 {
+  text-align: center;
+  margin: auto 0;
+  display: none;
+}
+
 
 @media(max-width:900px){
   .splash {
@@ -197,6 +199,7 @@ a {
   .portrait {
     max-width: 100%;
     height: auto;
+    display: block;
   }
 }
 
@@ -206,10 +209,12 @@ a {
   font-weight: 800;
   margin: auto 0 ;
   color: #5A5FA9;
-  font-size: 40px;
+  font-size: 36px;
   display: block;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .portfoliocontainer {
@@ -219,12 +224,19 @@ a {
 
 .portinfo {
   display: inline-block;
+  margin: auto 0;
 }
 
 .portimage {
   display: inline-block;
+  margin: auto 0;
+  padding: 20px;
 }
 
+.portimage img {
+  max-width: 100%;
+  min-width: 145px;
+}
 .porttitle {
   text-transform: uppercase;
   font-family: 'Catamarran', sans-serif;
@@ -239,85 +251,361 @@ a {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
-}
-      /* CONTACT SECTION */
+  color:#A67F5B;
+  text-transform: uppercase;
+  font-family: 'Catamarran', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0 auto;
 
-.contact-section {
-    background: #5A5FA9;
-    padding: 30px 0 50px 0;
+}
+
+.casestudy:hover {
+  color: white;
+  background-color:#A67F5B;
+  transition: background-color 150ms ease-in, color 150ms ease-in;
+}
+
+@media(min-width: 768px){
+  .image {
+    filter: url(filters.svg#grayscale);
+      filter: gray;
+      -webkit-filter: grayscale(1);
+      -webkit-transition: all .5s ease-in-out;
+    padding-right: 30px;
+  }
+  .image:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.1);
+  }
+}
+
+@media(max-width: 768px){
+  .porttitle {
+    width: 100%;
+    display: block;
+    text-align: center;
+    order: 0;
+    background-color:#A67F5B;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+  }
+  .portfoliocontainer {
+    flex-wrap: wrap;
+  }
+  .portimage {
+    order:2;
+    margin: auto 0;
+    width: 100%;
+  }
+  .portinfo {
+    order:1;
+  }
+  .casestudy {
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+  }
+  .image {
+    display: block;
+    margin: auto;
+  }
+  .porttext {
+    display: block;
+    width: 90%;
+    padding: 10px 20px;
     text-align: center;
   }
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin: 0 auto;
-        max-width: 880px;
-        height: 450px;
-        background: rgba(0, 0, 0, 0.32);
-        text-align: left;
-        padding: 10px 0;
-        .subject,
-        .content {
-            width: 80%;
-            margin: 0 auto;
-            label {
-                display: block;
-                padding: 0;
-                margin: 0;
-                font-family: 'Varela Round';
-            }
-        }
-        .id {
-            display: flex;
-            justify-content: space-between;
-            height: 80px;
-            width: 80%;
-            margin: 0 auto;
-            .name,
-            .email,
-            {
-                display: inline-block;
-                width: 45%;
-                label {
-                    display: block;
-                    padding: 0;
-                    margin: 0;
-                    font-family: 'Varela Round';
-                }
-                input[name="email"],
-                input[name="name"] {
-                    width: 100%;
-                    height: 40px;
-                }
-            }
-        }
-        .subject {
-            height: 62px;
-            input[name="subject"] {
-                width: 100%;
-                height: 40px;
-            }
-        }
-        .content {
-            textarea {
-                width: 100%;
-                resize: none;
-            }
-            button {
-              margin: 0;
-                float: right;
-                background: #e74c3c;
-                padding: 8px 77px;
-                border: 1px solid #e74c3c;
-                box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-                font-family: 'Varela Round';
-                transition: all .3;
-                &:hover {
-                    background: none;
-                    border: 1px solid rgba(0, 0, 0, .7);
-                }
-            }
-        }
-    }
+}
+      /* CONTACT SECTION */
+#contact {
+  background-color:#5A5FA9;
+  padding-bottom: 200px;
+}
+      input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+      }
+
+      input[type=submit] {
+          width: 100%;
+          background-color: #fff;
+          color: #A67F5B;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: 1px solid #A67F5B;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+          background-color: #A67F5B;
+          color: white;
+          border: 1px solid white;
+          transition: background-color 120ms ease-in, color 120ms ease-in;
+      }
+
+      textarea[type=textarea] {
+        max-width: 100%;
+        position: absolute;
+      }
+      textarea {
+        resize: vertical;
+       }
+
+      #message {
+        height: 40%;
+        width: 99%;
+        padding-top: 12px;
+
+      }
+
+      .formdiv {
+          border-radius: 5px;
+          background-color: #5A5FA9;
+          padding: 20px;
+          margin: auto;
+          display: flex;
+          font-family: 'Catamarran', sans-serif;
+          color: white;
+      }
+.form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media(min-width: 768px){
+  .form {
+    width: 60%;
+  }
+}
+      /* FOOTER */
+
+#footer {
+  position: relative;
+  height: 110px;
+  display: block;
+  z-index: 100;
+}
+
+.innerfooter {
+  width: auto;
+  margin: 0 auto;
+  align-content: center;
+}
+
+.footerbar {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 50%;
+}
+.footertitle {
+  font-family: 'Heebo', sans-serif;
+  text-transform: uppercase;
+  color: #5B5EA6;
+  font-weight: 500;
+  font-size: 20px;
+  float: left;
+  /*width: 90%;*/
+  display: flex;
+}
+.footerimg {
+  width: 75px;
+  height: 75px;
+  padding: 10px 20px;
+
+
+}
+
+.footerrights {
+  float: right;
+  text-transform: uppercase;
+  font-family: 'Catamarran', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #5B5EA6;
+  display: inline-block;
+}
+.footertitle, .footerrights {
+  margin: 25px 0;
+}
+
+
+
+      /* ------ CASE STUDIES PAGE -------- */
+
+#youcreate {
+  position: relative;
+  padding-top: 80px;
+}
+
+.youcreatesection {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.research {
+  background-color:#5B5EA6;
+  color: white;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.title1 {
+  color: #5A5FA9 !important;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 800;
+  margin: auto 0 ;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+}
+
+
+.title2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: white;
+
+}
+
+.title3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #A67F5B;
+}
+
+h2 {
+  font-family: 'Catamarran', sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+
+.subheading {
+  font-family: 'Catamarran', sans-serif;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  background: #A67F5B;
+  text-transform: uppercase;
+  font-size: 28px;
+  height: 50px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+
+}
+
+.research {
+  padding-bottom: 20px;
+}
+
+.researchtext {
+  margin: auto 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+  text-indent: 50px;
+}
+
+/*.design {
+  display: flex;
+  width: 100%;
+}*/
+
+.leftbox {
+  height: auto;
+  width: 40%;
+}
+
+.rightbox {
+  width: 60%;
+  background-color: #5A5FA9;
+  color: white;
+  border-bottom: 10px solid white;
+}
+
+.rightboxtitle {
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.box {
+  display: inline-flex;
+  width: 100%;
+}
+
+
+.personaimg {
+  width: 100%;
+}
+
+.textbox {
+  font-family: 'Catamarran', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  line-height: 24px;
+}
+/*
+
+
+/* STYLE GUIDE */
+
+.logos {
+width: 100%;
+}
+
+.styleguide .textbox {
+  text-align: left;
+}
+@media(max-width: 768px){
+.box:nth-child(2){
+  /*font-size: 14px;*/
+  line-height:28px;
+  display: block;
+}
+.styleguide .rightbox{
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+}
+.logos {
+  margin: 0 auto;
+  display: block;
+  /*width: 100%;*/
+}
+.styleguide .leftbox {
+  height: auto;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  }
+}
+
+.fullbox {
+  width: 100%;
+  height: auto;
+}
+
+.stylepic {
+  display: block;
+  width: 70%;
+  margin: auto;
 }
